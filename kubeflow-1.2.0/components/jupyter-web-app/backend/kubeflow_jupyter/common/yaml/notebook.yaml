@@ -1,0 +1,37 @@
+apiVersion: kubeflow.org/v1beta1
+kind: Notebook
+metadata:
+  name: {name}
+  namespace: {namespace}
+  labels:
+    app: {name}
+spec:
+  template:
+    spec:
+      affinity: {{}}
+      hostAliases:
+      - ip: "127.0.0.1"
+        hostnames:
+        - "foo.local"
+        - "bar.local"
+        - "dudgnl23.custom.local"
+      - ip: "10.1.2.3"
+        hostnames:
+        - "foo.remote"
+        - "bar.remote"
+      serviceAccountName: {serviceAccount}
+      containers:
+        - name: {name}
+          image: ""
+          volumeMounts: []
+          env: []
+          resources:
+            requests:
+              cpu: "0.1"
+              memory: "0.1Gi"
+            limits:
+              cpu: "0.1"
+              memory: "0.1Gi"
+      ttlSecondsAfterFinished: 300
+      tolerations: []
+      volumes: []
