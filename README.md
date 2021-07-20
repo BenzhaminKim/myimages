@@ -1,4 +1,4 @@
-<img src="assets/k9s.png">ss
+<img src="assets/k9s.png">
 
 # K9s - Kubernetes CLI To Manage Your Clusters In Style!
 
